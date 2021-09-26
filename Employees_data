@@ -1,0 +1,35 @@
+#include<stdio.h>
+#define max 50
+int main()
+{
+	struct employee
+	{
+		char name[20];
+		float salary;
+		int age;
+		unsigned long int p_number;
+	};
+	struct employee e[max];
+	int n,i;
+	printf("Enter number of employees:\n");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+	printf("ENTER THE EMPLOYEE DETAILS:\n");
+	printf("Enter employee name:\n");
+	scanf("%s",e[i].name);
+	printf("Enter the age of the employee:\n");
+	scanf("%d",&e[i].age);
+	printf("Enter the phone number of the employee:\n");
+	scanf("%lu",&e[i].p_number);
+	printf("Enter the salary of the employee:\n");
+	scanf("%f",&e[i].salary);
+    }
+    printf("The details of the employee are:\n");
+	printf("Name		Age		 Phone_Number			Salary\n");
+    for(i=0;i<n;i++)
+    {
+	printf("%s		%d		 %lu			%f\n",e[i].name,e[i].age,e[i].p_number,e[i].salary);
+    }
+	return 0;
+}
